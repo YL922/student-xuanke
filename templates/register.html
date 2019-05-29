@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        form {
+            width: 100%;
+            background: antiquewhite;
+            margin: auto;
+        }
+        div{
+           width: 30%;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+     <form action="/student/" method="post">
+         {% csrf_token %}
+         <div>
+             <p>
+                 <label for="sn">姓名：</label>
+                 <input name="sname" id="sn" />
+             </p>
+             <p>
+                 <label for="sid">学号：</label>
+                 <input name="sid" id="sid" />
+             </p>
+             <p>
+                 <label for="sn">所属班级：</label>
+                 <select name="clsname" id="sc">
+                     <option value="一班">一班</option>
+                     <option value="二班">二班</option>
+                     <option value="三班">三班</option>
+                 </select>
+             </p>
+             <p>
+                 <label>选课：</label>
+                 <input type="checkbox" name="coursename" value="python"/>python &emsp;
+                 <input type="checkbox" name="coursename" value="java"/>java &emsp;
+                 <input type="checkbox" name="coursename" value="c++"/>c++ &emsp;
+             </p>
+             <p>
+                 <input type="submit" value="提交"/>
+             </p>
+         </div>
+     </form>
+
+</body>
+</html>
